@@ -17,4 +17,6 @@ install:
   composer update --no-interaction --no-ansi --optimize-autoloader --prefer-dist
 
 script:
-  - php vendor/bin/phpunit
+  - ./vendor/bin/phpcs
+  - ./vendor/bin/phpstan analyse
+  - ./vendor/bin/phpunit
