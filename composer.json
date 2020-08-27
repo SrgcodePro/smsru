@@ -1,0 +1,34 @@
+{
+  "name": "srgcodepro/smsru",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "srgcode",
+      "email": "mail@srgcode.pro"
+    }
+  ],
+  "require": {
+    "php": ">=7.2.0",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-mbstring": "*",
+    "guzzlehttp/guzzle": "^7.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.3",
+    "squizlabs/php_codesniffer": "^3.5",
+    "phpstan/phpstan": "^0.12.40"
+  },
+  "autoload": {
+    "psr-4": {
+      "SmsRu\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SmsRu\\Tests\\": "tests"
+    }
+  }
+}
