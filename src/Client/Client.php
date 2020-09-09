@@ -17,7 +17,7 @@ class Client implements ClientInterface
 
     /**
      * Client constructor.
-     * @param array $config
+     * @param array<string> $config
      */
     public function __construct(array $config = [])
     {
@@ -26,13 +26,22 @@ class Client implements ClientInterface
 
     /**
      * @param string $method
-     * @param array $queryParams
+     * @param array<string,int> $queryParams
      * @return mixed|\Psr\Http\Message\ResponseInterface
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function call(string $method, array $queryParams = [])
     {
-        $response = $this->client->get($this->baseUrl.$method, ['query'=>$queryParams]);
+        $response = $this->client->get($this->getUrl($method), ['query'=>$queryParams]);
         return $response;
+    }
+
+    /**
+     * @param string $method
+     * @return string
+     */
+    public function getUrl(string $method): string
+    {
+        return $this->baseUrl . $method;
     }
 }

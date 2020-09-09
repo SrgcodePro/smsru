@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SmsRu\Api\Auth;
+namespace SmsRu\Auth;
 
 interface AuthInterface
 {

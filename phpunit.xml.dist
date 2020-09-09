@@ -3,6 +3,7 @@
     bootstrap="tests/bootstrap.php"
     beStrictAboutOutputDuringTests="true"
     backupGlobals="false"
+    cacheResult="false"
     verbose="true"
     colors="true">
     <testsuites>

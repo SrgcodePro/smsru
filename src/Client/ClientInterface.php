@@ -8,7 +8,7 @@ interface ClientInterface
 {
     /**
      * @param string $method
-     * @param array $queryParams
+     * @param array<string,int> $queryParams
      * @return mixed
      */
     public function call(string $method, array $queryParams = []);
